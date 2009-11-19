@@ -24,7 +24,7 @@ or just copy `vimlib/plugin/wc.vim` to your plugin directory (`~/.vim/plugin/`).
 Configurations
 ==============
 
-add this to your `.gvimrc`
+adjust this in your `.gvimrc`
 
     let g:screen_cols = 177
     let g:screen_rows = 48

@@ -23,8 +23,8 @@ let g:zero_y = 20
 
 let g:window_ctrl_h_inc = 5  " columns
 let g:window_ctrl_v_inc = 3   " lines
-let g:window_ctrl_x_inc = 400
-let g:window_ctrl_y_inc = 300
+let g:window_ctrl_x_inc = 30
+let g:window_ctrl_y_inc = 30
 
 "}}}
 " Window Ctrl"{{{
@@ -154,6 +154,6 @@ com! DecX :call s:AdjustX('-')
 
 com! WindowCtrlToggle         :cal ToggleWindowCtrl()
 
-nmap <leader>ww   :WindowCtrlToggle
+nmap <leader>ww   :WindowCtrlToggle<CR>
 
 "}}}

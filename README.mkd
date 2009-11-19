@@ -1,0 +1,31 @@
+
+
+Window Ctrl Plugin for VIM
+==========================
+
+`<leader>ww` (`\ww`) to toggle window control mode
+
+`h,j,k,l` is for moving window position.
+
+Arrow top,left,down,right is for resizing window size.
+
+- gg: snap window to grid
+- gh: resize to left side
+- gl: resize to right side
+
+Installation
+==============
+
+    $ vim-packager build 
+    $ make install
+
+or just copy `vimlib/plugin/wc.vim` to your plugin directory (`~/.vim/plugin/`).
+
+Configurations
+==============
+
+    let g:window_ctrl_h_inc = 5   " columns
+    let g:window_ctrl_v_inc = 3   " lines
+    let g:window_ctrl_x_inc = 30
+    let g:window_ctrl_y_inc = 30
+

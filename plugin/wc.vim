@@ -94,7 +94,7 @@ com! WHLeft  :cal s:WHLeft()
 com! WHRight :cal s:WHRight()
 
 
-fun! EnableWindowCtrl()
+fun! s:EnableWindowCtrl()
   nnoremap <buffer> <silent> <Up>    :DecHeight<CR>
   nnoremap <buffer> <silent> <Down>  :IncHeight<CR>
   nnoremap <buffer> <silent> <Left>  :DecWidth<CR>
@@ -113,7 +113,7 @@ fun! EnableWindowCtrl()
   nnoremap <buffer> <silent> gl      :WHRight<CR>
 endf
 
-fun! DisableWindowCtrl()
+fun! s:DisableWindowCtrl()
   nunmap <buffer> <silent> <Up>
   nunmap <buffer> <silent> <Down>
   nunmap <buffer> <silent> <Left>
@@ -128,15 +128,15 @@ fun! DisableWindowCtrl()
 endf
 
 let g:window_ctrl = 0
-fun! ToggleWindowCtrl()
+fun! s:ToggleWindowCtrl()
   if g:window_ctrl 
     echo 'Window Ctrl: off'
-    call DisableWindowCtrl()
+    call s:DisableWindowCtrl()
     let g:window_ctrl = 0
     redraw
   else
     echo 'Window Ctrl: on'
-    call EnableWindowCtrl()
+    call s:EnableWindowCtrl()
     let g:window_ctrl = 1
     redraw
   endif
@@ -152,8 +152,8 @@ com! DecY :cal s:AdjustY('-')
 com! IncX :call s:AdjustX('+')
 com! DecX :call s:AdjustX('-')
 
-com! WindowCtrlToggle         :cal ToggleWindowCtrl()
+com! WindowCtrlToggle :cal <SID>ToggleWindowCtrl()
 
-nmap <leader>ww   :WindowCtrlToggle<CR>
+nmap <leader>wc   :WindowCtrlToggle<CR>
 
 "}}}

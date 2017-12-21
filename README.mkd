@@ -1,9 +1,7 @@
-
-
 Window Ctrl Plugin for VIM
 ==========================
 
-Use `<C-w>c` to toggle window control
+Use `<leader>wc` to toggle window control
 
 `h,j,k,l` is for moving window position.
 

@@ -3,7 +3,7 @@
 Window Ctrl Plugin for VIM
 ==========================
 
-`<leader>ww` (`\ww`) to toggle window control mode
+Use `<C-w>c` to toggle window control
 
 `h,j,k,l` is for moving window position.
 
@@ -16,10 +16,12 @@ Arrow top,left,down,right is for resizing window size.
 Installation
 ==============
 
-    $ vim-packager build 
-    $ make install
+Vundle:
 
-or just copy `vimlib/plugin/wc.vim` to your plugin directory (`~/.vim/plugin/`).
+```vim
+Plugin 'c9s/winctl'
+```
+
 
 Configurations
 ==============
